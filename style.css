@@ -14,10 +14,10 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image:url(image/background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center 80%;
 }
 
 .container{
@@ -407,4 +407,52 @@ nav .fa-solid{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+.project-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #262626;
+    padding: 0; /* 去掉原来的内边距，图片占满上半部分 */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden; /* 让圆角对图片生效 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-image {
+    width: 100%;
+    height: 400px; /* 图片区域高度加大了 */
+    object-fit: cover;
+    display: block;
+}
+
+.project-card-content {
+    padding: 20px; /* 把文字区单独加 padding */
+}
+
+.project-card h2 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: #ccc;
+}
+
+.project-card a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
 }
